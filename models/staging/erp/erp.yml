@@ -10,7 +10,8 @@ sources:
         description: Tabela fonte com informações dos funcionários
         columns:
           - name: id
-        data_tests:
-          - unique
-          - not_null
-          
+            description: Chave primária da tabela funcionários
+            tests:
+              - unique
+              - not_null
+ 
