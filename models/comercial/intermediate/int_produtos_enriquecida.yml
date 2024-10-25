@@ -1,0 +1,14 @@
+version: 2 
+
+models:
+  - name: int_produtos_enriquecida
+    description: Tabela inttermediaria para designar gerente do funcionário
+    columns:
+      - name: PK_PRODUTO
+        description: Chave primária que identifica de forma exclusiva cada funcionário na tabela.
+        data_tests:
+          - unique
+          - not_null
+
+     
+
