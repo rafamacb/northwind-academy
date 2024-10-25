@@ -2,13 +2,46 @@ version: 2
 
 models:
   - name: int_produtos_enriquecida
-    description: Tabela inttermediaria para designar gerente do funcionário
+    description: Tabela intermediária para enriquecer os dados da dimensão produto.
     columns:
       - name: PK_PRODUTO
-        description: Chave primária que identifica de forma exclusiva cada funcionário na tabela.
+        description: Chave primária que identifica de forma exclusiva cada produto na tabela.
         data_tests:
           - unique
           - not_null
 
-     
+      - name: NM_PRODUTO
+        description: Nome descritivo do produto para facilitar a identificação.
 
+      - name: QUANTIDADE_POR_UNIDADE
+        description: Quantidade do produto disponível em cada unidade de venda ou embalagem.
+
+      - name: PRECO_POR_UNIDADE
+        description: Preço de venda por unidade do produto, usado para cálculos de receita.
+
+      - name: UNIDADE_EM_ESTOQUE
+        description: Quantidade atual do produto disponível no estoque.
+
+      - name: UNIDADE_POR_PEDIDO
+        description: Quantidade mínima do produto que deve ser solicitada em cada pedido.
+
+      - name: NIVEL_DE_PEDIDO
+        description: Nível de estoque que, ao ser atingido, indica a necessidade de reposição.
+
+      - name: EH_DISCONTINUADO
+        description: Indica se o produto está em produção ativa (0) ou foi descontinuado (1).
+
+      - name: NOME_CATEGORIA
+        description: Categoria à qual o produto pertence, permitindo a classificação em grupos.
+
+      - name: DESCRICAO_CATEGORIA
+        description: Descrição detalhada da categoria do produto, fornecendo contexto adicional.
+
+      - name: NOME_FORNECEDOR
+        description: Nome da empresa fornecedora do produto, essencial para rastreio e logística.
+
+      - name: CIDADE_FORNECEDOR
+        description: Cidade onde o fornecedor está localizado, útil para análises de logística.
+
+      - name: PAIS_FORNECEDOR
+        description: País de origem do fornecedor, importante para estudos de importação/exportação.
