@@ -1,0 +1,33 @@
+version: 2 
+
+models:
+  - name: dim_funcionarios
+    description: Tabela dimensão funcionários
+    columns:
+      - name: PK_FUNCIONARIO
+        description: Chave primária que identifica de forma exclusiva cada funcionário na tabela.
+
+      - name: NOME_FUNCIONARIO
+        description: Nome completo do funcionário.
+
+      - name: NOME_GERENTE
+        description: Nome completo do gerente responsável pelo funcionário.
+
+      - name: CARGO_FUNCIONARIO
+        description: Cargo atual ocupado pelo funcionário na empresa.
+
+      - name: DT_NASCIMENTO_FUNCIONARIO
+        description: Data de nascimento do funcionário, usada para cálculos de idade e outros fins.
+
+      - name: DT_CONTRATACAO
+        description: Data em que o funcionário foi oficialmente contratado pela empresa.
+
+      - name: CIDADE_FUNCIONARIO
+        description: Cidade onde o funcionário reside.
+
+      - name: REGIAO_FUNCIONARIO
+        description: Região geográfica onde o funcionário reside, útil para segmentação de dados regionais.
+        
+      - name: PAIS_FUNCIONARIO
+        description: País de residência do funcionário.
+

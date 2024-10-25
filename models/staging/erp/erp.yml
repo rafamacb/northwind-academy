@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: erp_northwind
+    description: Sistema de dados da Nothwind
+    database: FEA24_9  
+    schema: RAW_NORTHWIND  
+    tables:
+      - name: employee
+        description: Tabela fonte com informações dos funcionários
+        columns:
+          - name: id
+            description: Chave primária da tabela funcionários
+            tests:
+              - unique
+              - not_null
+ 
