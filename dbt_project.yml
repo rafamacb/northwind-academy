@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'mdbt_nothwind'
+name: 'dbt_northwind'
 version: '1.0.0'
 config-version: 2
 
@@ -36,12 +36,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  mdbt_nothwind:
-    # Applies to all files under models/example/
+  dbt_northwind:
+
     comercial:
       +materialized: table
-      intermediate: 
+      intermediate:
+        +schema: intermediate
+
+      marts:
+        +schema: marts
+    
     staging:
       +materialized: view
+      +schema: staging
       erp:
 

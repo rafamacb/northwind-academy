@@ -1,11 +1,14 @@
 version: 2 
 
 models:
-  - name: dim_produtos
-    description: Tabela dimensão da tabela produto.
+  - name: int_produtos_enriquecida
+    description: Tabela intermediária para enriquecer os dados da dimensão produto.
     columns:
       - name: PK_PRODUTO
         description: Chave primária que identifica de forma exclusiva cada produto na tabela.
+        data_tests:
+          - unique
+          - not_null
 
       - name: NM_PRODUTO
         description: Nome descritivo do produto para facilitar a identificação.
